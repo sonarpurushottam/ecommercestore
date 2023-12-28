@@ -1,15 +1,23 @@
 import React from "react";
-
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 import Header from "../components/Header";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Headphones = () => {
   const items = useSelector((state) => state.allCart.items);
   const dispatch = useDispatch();
+
+  const handleAddToCart = (link) => {
+    dispatch(addToCart(link));
+    toast.success(`${link.title} Added  to the cart!`);
+  };
+
   return (
     <>
       <Header />
+      <ToastContainer />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
         {items.map((link) => (
           <div
@@ -40,9 +48,8 @@ const Headphones = () => {
                   </span>
                 </p>
               </div>
-              <a
-                onClick={() => dispatch(addToCart(link))}
-                href="#"
+              <button
+                onClick={() => handleAddToCart(link)}
                 className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
               >
                 <svg
@@ -60,7 +67,7 @@ const Headphones = () => {
                   />
                 </svg>
                 Add to cart
-              </a>
+              </button>
             </div>
           </div>
         ))}
