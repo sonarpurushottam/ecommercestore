@@ -1,23 +1,23 @@
-// Headphones.js
+// Shoes.js
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 
-const Headphones = () => {
-  const headphonesData = useSelector((state) => state.cart.headphones);
+const Shoes = () => {
+  const shoesData = useSelector((state) => state.cart.shoes);
   const dispatch = useDispatch();
 
   const handleAddToCart = (id) => {
-    dispatch(addToCart({ category: "headphones", id }));
+    dispatch(addToCart({ category: "shoes", id }));
   };
 
   return (
     <div>
-      <h2>Headphones</h2>
-      {headphonesData.map((item) => (
+      <h2>Shoes</h2>
+      {shoesData.map((item) => (
         <div key={item.id}>
           <div>
-            <img src={item.img} alt="headphone imgs" />
+            <img src={item.img} alt="shoes imgs" />
             <p>{item.title}</p>
             <p>Price: ${item.price}</p>
             <button onClick={() => handleAddToCart(item.id)}>
@@ -30,4 +30,4 @@ const Headphones = () => {
   );
 };
 
-export default Headphones;
+export default Shoes;

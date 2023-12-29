@@ -43,15 +43,18 @@ const Header = () => {
                 </span>
               )}
             </NavLink>
+            <NavLink to="/headphones" className="hover:text-gray-300">
+              Headphones
+            </NavLink>
+            <NavLink to="/Shoes" className="hover:text-gray-300">
+              Shoes
+            </NavLink>
           </div>
         </nav>
 
         <nav className="lg:hidden">
           <NavLink to="/mobiles" className="hover:text-gray-300">
             Mobiles
-          </NavLink>
-          <NavLink to="/headphones" className="hover:text-gray-300">
-            Headphones
           </NavLink>
         </nav>
       </div>

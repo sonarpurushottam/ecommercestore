@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Shoes from "./pages/Shoes";
 
 const App = () => {
   return (
@@ -21,12 +22,13 @@ const App = () => {
             <Route path="About" element={<About />} />
             <Route path="Contact" element={<Contact />} />
             <Route path="Cart" element={<Cart />} />
+            <Route path="Headphones" element={<Headphones />} />
+            <Route path="Shoes" element={<Shoes />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
           <Route>
             <Route path="Mobiles" element={<Mobiles />} />
             <Route path="Electronics" element={<Electronics />} />
-            <Route path="Headphones" element={<Headphones />} />
           </Route>
         </Routes>
       </BrowserRouter>
