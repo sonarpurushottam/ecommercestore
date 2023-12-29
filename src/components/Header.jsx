@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
-import SearchInput from "./SearchInput";
+
 import { MdFavorite } from "react-icons/md";
 
 const Header = () => {
@@ -26,9 +26,7 @@ const Header = () => {
             <NavLink to="/contact" className="hover:text-gray-300">
               Contact
             </NavLink>
-            <NavLink to="/search" className="hover:text-gray-300">
-              <SearchInput />
-            </NavLink>
+
             <NavLink
               to="/cart"
               className="flex items-center hover:text-gray-300"
