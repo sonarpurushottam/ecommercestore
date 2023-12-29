@@ -8,7 +8,7 @@ const Shoes = () => {
   const dispatch = useDispatch();
 
   const handleAddToCart = (id) => {
-    dispatch(addToCart({ category: "shoes", id }));
+    dispatch(addToCart({ category: "items", id }));
   };
 
   return (

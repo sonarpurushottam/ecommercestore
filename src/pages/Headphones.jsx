@@ -8,7 +8,7 @@ const Headphones = () => {
   const dispatch = useDispatch();
 
   const handleAddToCart = (id) => {
-    dispatch(addToCart({ category: "headphones", id }));
+    dispatch(addToCart({ category: "items", id }));
   };
 
   return (
