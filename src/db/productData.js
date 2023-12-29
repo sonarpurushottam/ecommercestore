@@ -14,10 +14,10 @@ import {
   earbuds9,
 } from "../assets/images/index";
 
-const data = [
+const productData = [
   {
     id: 8,
-    src: earbuds1,
+    img: earbuds1,
 
     title: "earbuds1",
     price: 4426,
@@ -25,7 +25,7 @@ const data = [
   },
   {
     id: 11,
-    src: earbuds2,
+    img: earbuds2,
 
     title: "earbuds2",
     price: 1132,
@@ -33,80 +33,80 @@ const data = [
   },
   {
     id: 1,
-    src: earbuds3,
+    img: earbuds3,
     title: "earbuds3",
     price: 2211,
     category: "earbuds",
   },
   {
     id: 6,
-    src: earbuds4,
+    img: earbuds4,
     title: "earbuds4",
     price: 2268,
     category: "earbuds",
   },
   {
     id: 11,
-    src: earbuds5,
+    img: earbuds5,
     title: "earbuds5",
     price: 4464,
     category: "earbuds",
   },
   {
     id: 8,
-    src: earbuds6,
+    img: earbuds6,
     title: "earbuds6",
     price: 3915,
     category: "earbuds",
   },
   {
     id: 10,
-    src: earbuds7,
+    img: earbuds7,
     title: "earbuds7",
     price: 4426,
     category: "earbuds",
   },
   {
     id: 1,
-    src: earbuds8,
+    img: earbuds8,
     title: "earbuds8",
     price: 4755,
     category: "earbuds",
   },
   {
     id: 7,
-    src: earbuds9,
+    img: earbuds9,
     title: "earbuds9",
     price: 4665,
     category: "earbuds",
   },
   {
     id: 4,
-    src: earbuds10,
+    img: earbuds10,
     title: "earbud10",
     price: 2480,
     category: "earbuds",
   },
   {
     id: 14,
-    src: earbuds11,
+    img: earbuds11,
     title: "earbuds11",
     price: 2241,
     category: "earbuds",
   },
   {
     id: 15,
-    src: earbuds12,
+    img: earbuds12,
     title: "earbuds12",
     price: 4340,
     category: "earbuds",
   },
   {
     id: 9,
-    src: earbuds13,
+    img: earbuds13,
     title: "earbuds14",
     price: 3843,
     category: "earbuds",
   },
 ];
-export default data;
+export default productData;
