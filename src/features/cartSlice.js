@@ -1,4 +1,4 @@
-// // cartSlice.js
+// cartSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import productData from "../db/productData";
 
@@ -18,6 +18,7 @@ const cartSlice = createSlice({
     total: 0,
     quantity: 0,
     productData: productData,
+    wishlist: [], // Added wishlist array
   },
   reducers: {
     addToCart: (state, action) => {
@@ -79,6 +80,22 @@ const cartSlice = createSlice({
       state.total = 0;
       state.quantity = 0;
     },
+    addToWishlist: (state, action) => {
+      const { id, type, quantity, price, img } = action.payload;
+      const existingItem = state.wishlist.find(
+        (item) => item.id === id && item.type === type
+      );
+
+      if (!existingItem) {
+        state.wishlist.push({ id, type, quantity, price, img });
+      }
+    },
+    removeFromWishlist: (state, action) => {
+      const { id, type } = action.payload;
+      state.wishlist = state.wishlist.filter(
+        (item) => !(item.id === id && item.type === type)
+      );
+    },
   },
 });
 
@@ -88,5 +105,7 @@ export const {
   increaseQuantity,
   decreaseQuantity,
   clearCart,
+  addToWishlist,
+  removeFromWishlist,
 } = cartSlice.actions;
 export default cartSlice.reducer;

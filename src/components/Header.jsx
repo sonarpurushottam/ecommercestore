@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import SearchInput from "./SearchInput";
+import { MdFavorite } from "react-icons/md";
 
 const Header = () => {
   const cartQuantity = useSelector((state) => state.cart.quantity);
+  const wishlistItems = useSelector((state) => state.cart.wishlist);
 
   return (
     <header className="bg-gray-800 p-4">
@@ -15,11 +17,7 @@ const Header = () => {
             <img src="logo.png" alt="Logo" className="h-8" />
           </NavLink>
           <div className="space-x-4 hidden md:flex">
-            <NavLink
-              to="/"
-              activeClassName="text-white"
-              className="text-gray-300 hover:text-white"
-            >
+            <NavLink to="/" className="text-gray-300 hover:text-white">
               Home
             </NavLink>
             <NavLink to="/about" className="hover:text-gray-300">
@@ -40,6 +38,14 @@ const Header = () => {
               {cartQuantity > 0 && (
                 <span className="bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs ml-1">
                   {cartQuantity}
+                </span>
+              )}
+            </NavLink>
+            <NavLink to="/wishlist" className="text-white mr-4 relative">
+              <MdFavorite className="text-2xl" />
+              {wishlistItems.length > 0 && (
+                <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2 py-1">
+                  {wishlistItems.length}
                 </span>
               )}
             </NavLink>

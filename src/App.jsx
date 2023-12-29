@@ -11,6 +11,7 @@ import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Shoes from "./pages/Shoes";
+import Wishlist from "./components/Wishlist";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="About" element={<About />} />
             <Route path="Contact" element={<Contact />} />
             <Route path="Cart" element={<Cart />} />
+            <Route path="Wishlist" element={<Wishlist />} />
             <Route path="Headphones" element={<Headphones />} />
             <Route path="Shoes" element={<Shoes />} />
             <Route path="*" element={<ErrorPage />} />
