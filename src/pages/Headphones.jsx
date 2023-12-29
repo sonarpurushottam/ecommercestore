@@ -9,6 +9,7 @@ import {
 import { MdFavorite } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 const Headphones = () => {
   const items = useSelector((state) => state.cart.items);
@@ -74,7 +75,8 @@ const Headphones = () => {
             className="relative flex flex-col overflow-hidden rounded-lg border border-#3596B5 bg-white shadow-md"
             key={product.id}
           >
-            <a
+            <Link
+              to={`/ProductDes/${product.id}`}
               className="relative flex h-100 overflow-hidden rounded-xl"
               href="#"
             >
@@ -83,7 +85,7 @@ const Headphones = () => {
                 src={product.img}
                 alt="product image"
               />
-            </a>
+            </Link>
             <div className="mt-4 px-5 pb-5 flex flex-col items-center justify-between">
               <a href="#" className="text-xl tracking-tight text-slate-900">
                 {product.title}

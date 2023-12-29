@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Shoes from "./pages/Shoes";
 import Wishlist from "./components/Wishlist";
+import ProductDes from "./components/ProductDes";
 
 const App = () => {
   return (
@@ -20,12 +21,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainHeader />}>
             <Route index element={<Home />}></Route>
-            <Route path="About" element={<About />} />
-            <Route path="Contact" element={<Contact />} />
-            <Route path="Cart" element={<Cart />} />
-            <Route path="Wishlist" element={<Wishlist />} />
-            <Route path="Headphones" element={<Headphones />} />
-            <Route path="Shoes" element={<Shoes />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Cart" element={<Cart />} />
+            <Route path="/Wishlist" element={<Wishlist />} />
+            <Route path="/Headphones" element={<Headphones />} />
+            <Route path="/Shoes" element={<Shoes />} />
+            <Route path="/ProductDes/:productId" element={<ProductDes />} />
+
             <Route path="*" element={<ErrorPage />} />
           </Route>
           <Route>
