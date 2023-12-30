@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainHeader from "./components/MainHeader";
 
 import Headphones from "./pages/Headphones";
+import Mobiles from "./pages/Mobiles";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Wishlist" element={<Wishlist />} />
+            <Route path="/Mobiles" element={<Mobiles />} />
             <Route path="/Headphones" element={<Headphones />} />
             <Route path="/Shoes" element={<Shoes />} />
             <Route path="/ProductDes/:productId" element={<ProductDes />} />

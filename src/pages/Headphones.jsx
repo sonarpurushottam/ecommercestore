@@ -1,4 +1,3 @@
-Headphones.jsx;
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -21,15 +20,6 @@ const Headphones = () => {
 
   const handleFilter = (category) => {
     setFilterCategory(category);
-  };
-
-  const calculateTotal = (items) => {
-    const total = items.reduce(
-      (acc, item) => acc + item.quantity * item.price,
-      0
-    );
-    const quantity = items.reduce((acc, item) => acc + item.quantity, 0);
-    return { total, quantity };
   };
 
   const filteredHeadphonesData =
@@ -74,22 +64,52 @@ const Headphones = () => {
         >
           All Headphones
         </button>
-        {/* ... (your existing filter buttons) */}
+        <button
+          className={`mr-2 ${
+            filterCategory === "onear"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200"
+          }`}
+          onClick={() => handleFilter("onear")}
+        >
+          On-Ear
+        </button>
+        <button
+          className={`mr-2 ${
+            filterCategory === "earbud"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200"
+          }`}
+          onClick={() => handleFilter("earbud")}
+        >
+          Earbuds
+        </button>
+
+        <button
+          className={`${
+            filterCategory === "speaker"
+              ? "bg-blue-500 text-white"
+              : "bg-gray-200"
+          }`}
+          onClick={() => handleFilter("speaker")}
+        >
+          Speakers
+        </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
         {filteredHeadphonesData.map((product) => (
           <div
-            data-aos="zoom-in"
-            className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-black/80 dark:hover:bg-primary hover:text-white relative shadow-xl duration-300 group max-w-[300px]"
+            className="relative flex flex-col overflow-hidden rounded-lg border border-#3596B5 bg-white shadow-md"
             key={product.id}
           >
             <Link
               to={`/ProductDes/${product.id}`}
               className="relative flex h-100 overflow-hidden rounded-xl"
+              href="#"
             >
               <img
-                className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
+                className="object-cover w-full h-full"
                 src={product.img}
                 alt="product image"
               />
