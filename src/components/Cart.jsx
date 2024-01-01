@@ -38,30 +38,34 @@ const Cart = () => {
         <p>Your cart is empty.</p>
       ) : (
         <div>
-          <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+          <ul className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8  ">
             {items.map((item) => (
               <li
                 key={item.id}
-                className="mt-4 px-5 pb-5 flex flex-col items-center justify-between"
+                className="mt-4 px-5 pb-5 flex flex-col items-center justify-between  rounded-[14px] "
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-50 h-50 object-cover mb-2"
+                  className="w-50 h-50 object-cover mb-2 "
                 />
-                <p className="text-lg font-bold">{item.title}</p>
-                <p className="text-gray-500">${item.price}</p>
+                <div>
+                  <p className="text-lg font-bold">{item.title}</p>
+                  <p className=" border-solid border-2 border-sky-500">
+                    ₹{item.price}
+                  </p>
+                </div>
                 <div className="flex items-center mt-2">
                   <button
                     onClick={() => handleDecrease(item.id, item.title)}
-                    className="flex justify-center items-center gap-2 w-14 h-6 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#059669] to-[#047857] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]"
+                    className="flex justify-center items-center gap-2 w-10 h-6 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#059669] to-[#047857] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]"
                   >
                     <FaMinus />
                   </button>
                   <span className="mx-2">{item.quantity}</span>
                   <button
                     onClick={() => handleIncrease(item.id, item.title)}
-                    className="flex justify-center items-center gap-2 w-14 h-6 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#059669] to-[#047857] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]"
+                    className="flex justify-center items-center gap-2 w-10 h-6 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#059669] to-[#047857] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]"
                   >
                     <FaPlus />
                   </button>

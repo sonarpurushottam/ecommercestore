@@ -136,7 +136,9 @@ const Headphones = () => {
               </div>
               <button
                 onClick={() => handleAddToCart(product)}
-                className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                // className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                className="cursor-pointer inline-flex items-center rounded-full px-5 py-2.5 text-sm font-mono font-semibold text-rose-600 hover:text-white border-2 border-rose-600
+                 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-rose-600 duration-300  focus:bg-transparent"
               >
                 <FaCartShopping className="mr-2" />
                 Add to Cart
