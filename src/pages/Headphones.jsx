@@ -9,6 +9,7 @@ import { MdFavorite } from "react-icons/md";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
+import { FaCartShopping } from "react-icons/fa6";
 
 const Headphones = () => {
   const items = useSelector((state) => state.cart.items);
@@ -97,7 +98,7 @@ const Headphones = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
         {filteredHeadphonesData.map((product) => (
           <div
             className="relative flex flex-col overflow-hidden rounded-lg border border-#3596B5 bg-white shadow-md"
@@ -116,7 +117,7 @@ const Headphones = () => {
 
               {/* Tooltip */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-75 text-white rounded-xl">
-                <span>{product.title}</span>
+                <span>View Product</span>
               </div>
             </Link>
             <div className="mt-4 px-5 pb-5 flex flex-col items-center justify-between">
@@ -131,15 +132,13 @@ const Headphones = () => {
                   <span className="text-3xl font-bold text-slate-900">
                     {product.price}
                   </span>
-                  <span className="text-sm text-slate-900 line-through ml-2">
-                    $699
-                  </span>
                 </p>
               </div>
               <button
                 onClick={() => handleAddToCart(product)}
                 className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
               >
+                <FaCartShopping className="mr-2" />
                 Add to Cart
               </button>
               <button
