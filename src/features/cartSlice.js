@@ -22,15 +22,15 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      const { id, type, quantity, price, img } = action.payload;
+      const { id, title, quantity, price, img } = action.payload;
       const existingItem = state.items.find(
-        (item) => item.id === id && item.type === type
+        (item) => item.id === id && item.title === title
       );
 
       if (existingItem) {
         existingItem.quantity += quantity;
       } else {
-        state.items.push({ id, type, quantity, price, img });
+        state.items.push({ id, title, quantity, price, img });
       }
 
       const { total, quantity: totalQuantity } = calculateTotal(state.items);
@@ -38,9 +38,9 @@ const cartSlice = createSlice({
       state.quantity = totalQuantity;
     },
     removeFromCart: (state, action) => {
-      const { id, type } = action.payload;
+      const { id, title } = action.payload;
       state.items = state.items.filter(
-        (item) => !(item.id === id && item.type === type)
+        (item) => !(item.id === id && item.title === title)
       );
 
       const { total, quantity } = calculateTotal(state.items);
@@ -48,9 +48,9 @@ const cartSlice = createSlice({
       state.quantity = quantity;
     },
     increaseQuantity: (state, action) => {
-      const { id, type } = action.payload;
+      const { id, title } = action.payload;
       const existingItem = state.items.find(
-        (item) => item.id === id && item.type === type
+        (item) => item.id === id && item.title === title
       );
 
       if (existingItem) {
@@ -62,9 +62,9 @@ const cartSlice = createSlice({
       state.quantity = quantity;
     },
     decreaseQuantity: (state, action) => {
-      const { id, type } = action.payload;
+      const { id, title } = action.payload;
       const existingItem = state.items.find(
-        (item) => item.id === id && item.type === type
+        (item) => item.id === id && item.title === title
       );
 
       if (existingItem && existingItem.quantity > 1) {
@@ -81,19 +81,19 @@ const cartSlice = createSlice({
       state.quantity = 0;
     },
     addToWishlist: (state, action) => {
-      const { id, type, quantity, price, img } = action.payload;
+      const { id, title, quantity, price, img } = action.payload;
       const existingItem = state.wishlist.find(
-        (item) => item.id === id && item.type === type
+        (item) => item.id === id && item.title === title
       );
 
       if (!existingItem) {
-        state.wishlist.push({ id, type, quantity, price, img });
+        state.wishlist.push({ id, title, quantity, price, img });
       }
     },
     removeFromWishlist: (state, action) => {
-      const { id, type } = action.payload;
+      const { id, title } = action.payload;
       state.wishlist = state.wishlist.filter(
-        (item) => !(item.id === id && item.type === type)
+        (item) => !(item.id === id && item.title === title)
       );
     },
   },
