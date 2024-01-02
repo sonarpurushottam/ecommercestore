@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainHeader from "./components/MainHeader";
 
 import Headphones from "./pages/Headphones";
+import Laptops from "./pages/Laptops";
 import Mobiles from "./pages/Mobiles";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
@@ -26,6 +27,8 @@ const App = () => {
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Wishlist" element={<Wishlist />} />
             <Route path="/Mobiles" element={<Mobiles />} />
+            <Route path="/Mobiles" element={<Mobiles />} />
+            <Route path="/Laptops" element={<Laptops />} />
             <Route path="/Headphones" element={<Headphones />} />
             <Route path="/Shoes" element={<Shoes />} />
             <Route path="/ProductDes/:productId" element={<ProductDes />} />

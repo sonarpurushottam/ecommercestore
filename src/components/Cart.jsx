@@ -47,43 +47,42 @@ const Cart = () => {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-32 m-2  rounded-[14px] border-solid border-2 border-sky-500"
+                  // className="w-full h-40 m-2  rounded-[14px] border-solid border-2 border-sky-500"
+                  className="object-cover w-full h-full"
                 />
                 <div>
-                  <p className="w-full h-6 m-2  rounded-[14px] border-solid border-2 border-sky-500 font-bold">
-                    {item.title}
-                  </p>
-                  <p className="rounded-[14px] border-solid border-2 border-sky-500 text-xl font-bold items-center">
-                    ₹{item.price}
-                  </p>
+                  <div className="w-full h-6 m-2 flex items-center justify-center font-bold gap-2">
+                    <p>{item.title}</p>
+                    <div>
+                      <p>₹{item.price}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center mt-2 rounded-[14px] border-solid border-2 border-sky-500">
+                <div className="flex items-center mt-2 gap-4 font-bold italic">
                   <button
                     onClick={() => handleDecrease(item.id, item.title)}
                     className="flex justify-center items-center gap-2 w-10 h-6 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#059669] to-[#047857] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]"
                   >
                     <FaMinus />
                   </button>
-                  <span className="mx-2 rounded-[14px] border-solid border-2 border-sky-500">
-                    {item.quantity}
-                  </span>
                   <button
                     onClick={() => handleIncrease(item.id, item.title)}
                     className="flex justify-center items-center gap-2 w-10 h-6 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#14b8a6] via-[#059669] to-[#047857] hover:shadow-xl hover:shadow-green-500 hover:scale-105 duration-300 hover:from-[#047857] hover:to-[#14b8a6]"
                   >
                     <FaPlus />
                   </button>
+                  <div>Quantity: {item.quantity}</div>
                 </div>
-                <h1 className="rounded-[14px] border-solid border-2 border-sky-500">
-                  Subtotal::{item.quantity * item.price}
-                </h1>
-                <button
-                  onClick={() => handleRemove(item.id, item.title)}
-                  className="flex justify-center items-center gap-2 w-24 h-10 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#fb7185] via-[#e11d48] to-[#be123c] hover:shadow-xl hover:shadow-red-500 hover:scale-105 duration-300 hover:from-[#be123c] hover:to-[#fb7185]"
-                >
-                  <FaTrash />
-                  Remove
-                </button>
+                <divf className="flex items-center mt-2 gap-4">
+                  <button
+                    onClick={() => handleRemove(item.id, item.title)}
+                    className="flex justify-center items-center gap-2 w-24 h-10 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#fb7185] via-[#e11d48] to-[#be123c] hover:shadow-xl hover:shadow-red-500 hover:scale-105 duration-300 hover:from-[#be123c] hover:to-[#fb7185]"
+                  >
+                    <FaTrash />
+                    Remove
+                  </button>
+                  <div>Subtotal::{item.quantity * item.price}</div>
+                </divf>
               </li>
             ))}
           </ul>

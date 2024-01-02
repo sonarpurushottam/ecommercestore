@@ -73,6 +73,7 @@ const Header = () => {
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/Mobiles">Mobiles</NavLink>
           <NavLink to="/Headphones">Headphones</NavLink>
+          <NavLink to="/Laptops">Laptops</NavLink>
           <NavLink to="/Shoes">Shoes</NavLink>
         </div>
       </div>
