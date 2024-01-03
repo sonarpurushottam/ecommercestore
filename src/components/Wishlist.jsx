@@ -2,6 +2,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToWishlist, removeFromWishlist } from "../features/cartSlice";
+import { MdDeleteForever } from "react-icons/md";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
@@ -17,35 +18,43 @@ const Wishlist = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Wishlist</h2>
+      <h1 className="text-3xl font-bold mb-4 ">Wishlist</h1>
       {wishlistItems.length === 0 ? (
         <p>Your wishlist is empty.</p>
       ) : (
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <ul className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 ">
           {wishlistItems.map((item) => (
             <li
               key={`${item.id}-${item.type}`}
-              className="bg-white rounded-lg p-4 shadow-md"
+              className=" px-5 pb-5 flex flex-col items-center justify-between  rounded-[14px] border-solid border-2 border-sky-500 bg-gray-200"
             >
               <img
                 src={item.img}
                 alt={item.type}
-                className="w-full h-32 object-cover mb-2"
+                className="object-cover w-full h-full "
               />
-              <p className="text-lg font-semibold mb-2">{item.type}</p>
-              <p className="text-gray-600 mb-2">Quantity: {item.quantity}</p>
-              <p className="text-gray-800">Price: ${item.price}</p>
-              <div className="mt-4 space-x-2">
-                <button
-                  onClick={() => handleAddToWishlist(item)}
-                  className="bg-blue-500 text-white px-3 py-1 rounded-md"
-                >
-                  Add to Wishlist
+              <div className=" bg-gray-200 w-full h-6 m-2 flex items-center justify-center font-bold gap-2">
+                <p>{item.title}</p>
+                <div>
+                  <p>₹{item.price}</p>
+                </div>
+              </div>
+
+              <div className="mt-2">
+                <button class="overflow-hidden relative w-32 p-2 h-12 bg-black text-white border-none rounded-md text-xl font-bold cursor-pointer  z-10 group">
+                  Checkout
+                  <span class="absolute w-36 h-32 -top-8 -left-2 bg-white rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-500 duration-1000 origin-left"></span>
+                  <span class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-400 rotate-12 transform scale-x-0 group-hover:scale-x-100 transition-transform group-hover:duration-700 duration-700 origin-left"></span>
+                  <span class="absolute w-36 h-32 -top-8 -left-2 bg-indigo-600 rotate-12 transform scale-x-0 group-hover:scale-x-50 transition-transform group-hover:duration-1000 duration-500 origin-left"></span>
+                  <span class="group-hover:opacity-100 group-hover:duration-1000 duration-100 opacity-0 absolute top-2.5 left-6 z-10">
+                    Buy Now
+                  </span>
                 </button>
                 <button
                   onClick={() => handleRemoveFromWishlist(item)}
-                  className="bg-red-500 text-white px-3 py-1 rounded-md"
+                  className="flex justify-center items-center gap-2 w-40 h-10 cursor-pointer rounded-md shadow-2xl text-white font-semibold bg-gradient-to-r from-[#fb7185] via-[#e11d48] to-[#be123c] hover:shadow-xl hover:shadow-red-500 hover:scale-105 duration-300 hover:from-[#be123c] hover:to-[#fb7185] mt-2"
                 >
+                  <MdDeleteForever />
                   Remove from Wishlist
                 </button>
               </div>

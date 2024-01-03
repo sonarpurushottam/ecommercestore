@@ -54,7 +54,6 @@ const Cart = () => {
                   />
                   <div>
                     <div className=" bg-gray-200 w-full h-6 m-2 flex items-center justify-center font-bold gap-2">
-                      {/* <div className="bg-gray-200 border-none p-4 text-base w-52 rounded-lg text-lightcoral shadow-md cursor-pointer flex items-center justify-center"> */}
                       <p>{item.title}</p>
                       <div>
                         <p>₹{item.price}</p>
