@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-// import { HiOutlineMenuAlt4 } from "react-icons/hi";
+
 import { FaSearch } from "react-icons/fa";
-// import Flex from "../../designLayouts/Flex";
+
 import { useNavigate } from "react-router-dom";
-// import { useSelector } from "react-redux";
+
 import productData from "../db/productData";
 import { FaCartShopping } from "react-icons/fa6";
 import { useSelector } from "react-redux";
