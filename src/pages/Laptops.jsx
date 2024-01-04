@@ -123,7 +123,7 @@ const Laptops = () => {
               <div className="mt-2 mb-5 flex items-center justify-center">
                 <p>
                   <span className="text-3xl font-bold text-slate-900">
-                    {product.price}
+                    ₹{product.price}
                   </span>
                 </p>
               </div>

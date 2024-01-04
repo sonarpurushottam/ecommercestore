@@ -43,11 +43,11 @@ const menuItems = [
     name: "Drones",
     link: "/Drones",
   },
-  {
-    id: 7,
-    name: "Shoes",
-    link: "/Shoes",
-  },
+  // {
+  //   id: 7,
+  //   name: "Shoes",
+  //   link: "/Shoes",
+  // },
   {
     id: 8,
     name: "About",

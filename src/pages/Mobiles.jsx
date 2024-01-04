@@ -38,7 +38,7 @@ const Mobiles = () => {
   };
   const handleToggleWishlist = (product) => {
     const isWishlistItem = wishlistItems.some(
-      (item) => item.id === product.id && item.type === product.type
+      (item) => item.id === product.id && item.title === product.title
     );
 
     if (isWishlistItem) {
@@ -51,17 +51,19 @@ const Mobiles = () => {
   };
   const isItemInWishlist = (product) => {
     return wishlistItems.some(
-      (item) => item.id === product.id && item.type === product.type
+      (item) => item.id === product.id && item.title === product.title
     );
   };
 
   return (
     <>
       <ToastContainer />
-      <div className="mb-4">
+      <div className="mb-4 flex w-50 h-20 ">
         <button
           className={`mr-2 ${
-            filterCompany === "all" ? "bg-blue-500 text-white" : "bg-gray-200"
+            filterCompany === "all"
+              ? "bg-blue-500 w-[150px]  h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+              : "w-[120px] bg-black h-[40px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
           }`}
           onClick={() => handleCompanyFilter("all")}
         >
@@ -70,8 +72,8 @@ const Mobiles = () => {
         <button
           className={`mr-2 ${
             filterCompany === "OnePlus"
-              ? "bg-blue-500 text-white"
-              : "bg-gray-200"
+              ? "bg-blue-500 w-[150px]  h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+              : "w-[120px] bg-black h-[40px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
           }`}
           onClick={() => handleCompanyFilter("OnePlus")}
         >
@@ -79,7 +81,9 @@ const Mobiles = () => {
         </button>
         <button
           className={`mr-2 ${
-            filterCompany === "Oppo" ? "bg-blue-500 text-white" : "bg-gray-200"
+            filterCompany === "Oppo"
+              ? "bg-blue-500  w-[150px]  h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+              : "w-[120px] bg-black h-[40px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
           }`}
           onClick={() => handleCompanyFilter("Oppo")}
         >
@@ -87,7 +91,9 @@ const Mobiles = () => {
         </button>
         <button
           className={`mr-2 ${
-            filterCompany === "Vivo" ? "bg-blue-500 text-white" : "bg-gray-200"
+            filterCompany === "Vivo"
+              ? "bg-blue-500 w-[150px]  h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+              : "w-[120px] bg-black h-[40px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
           }`}
           onClick={() => handleCompanyFilter("Vivo")}
         >
@@ -95,7 +101,9 @@ const Mobiles = () => {
         </button>
         <button
           className={`${
-            filterCompany === "Apple" ? "bg-blue-500 text-white" : "bg-gray-200"
+            filterCompany === "Apple"
+              ? "bg-blue-500 w-[150px]  h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+              : "w-[120px] bg-black h-[40px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
           }`}
           onClick={() => handleCompanyFilter("Apple")}
         >
@@ -133,7 +141,7 @@ const Mobiles = () => {
               <div className="mt-2 mb-5 flex items-center justify-center">
                 <p>
                   <span className="text-3xl font-bold text-slate-900">
-                    {product.price}
+                    ₹{product.price}
                   </span>
                 </p>
               </div>
