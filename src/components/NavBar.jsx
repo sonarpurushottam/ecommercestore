@@ -1,8 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { FaCartShopping } from "react-icons/fa6";
+import { MdFavorite } from "react-icons/md";
 
 const menuItems = [
   {
@@ -59,6 +62,9 @@ const menuItems = [
 export function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const cartQuantity = useSelector((state) => state.cart.quantity);
+  const wishlistItems = useSelector((state) => state.cart.wishlist);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -98,15 +104,41 @@ export function NavBar() {
             ))}
           </ul>
         </div>
-        {/* <div className="hidden lg:block"> */}
-        {/* <button
+
+        <div className="hidden lg:block">
+          {/* <button
             type="button"
             className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
             Button text
           </button> */}
+          <NavLink
+            to="/cart"
+            className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+          >
+            <span className="group-hover:block hidden transition-all duration-200">
+              Cart
+            </span>
 
-        {/* </div> */}
+            {cartQuantity > 0 && <span>{cartQuantity}</span>}
+
+            <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+          </NavLink>
+        </div>
+
+        <div className="hidden lg:block">
+          <NavLink
+            to="/wishlist"
+            className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+          >
+            <span className="group-hover:block hidden transition-all duration-200">
+              Wishlist
+            </span>
+            <MdFavorite />
+            {wishlistItems.length > 0 && <span>{wishlistItems.length}</span>}
+          </NavLink>
+        </div>
+
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
@@ -130,7 +162,36 @@ export function NavBar() {
                         />
                       </svg>
                     </span>
-                    <span className="font-bold">DevUI</span>
+                    <span className="font-bold">Online Store</span>
+                  </div>
+                  <div className="-mr-2">
+                    <div className="flex">
+                      <NavLink
+                        to="/cart"
+                        className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+                      >
+                        <span className="group-hover:block hidden transition-all duration-200">
+                          Cart
+                        </span>
+
+                        {cartQuantity > 0 && <span>{cartQuantity}</span>}
+
+                        <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+                      </NavLink>
+
+                      <NavLink
+                        to="/wishlist"
+                        className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+                      >
+                        <span className="group-hover:block hidden transition-all duration-200">
+                          Wishlist
+                        </span>
+                        <MdFavorite />
+                        {wishlistItems.length > 0 && (
+                          <span>{wishlistItems.length}</span>
+                        )}
+                      </NavLink>
+                    </div>
                   </div>
                   <div className="-mr-2">
                     <button
@@ -158,12 +219,12 @@ export function NavBar() {
                     ))}
                   </nav>
                 </div>
-                <button
+                {/* <button
                   type="button"
                   className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   Button text
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

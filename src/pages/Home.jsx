@@ -10,6 +10,7 @@ import Subscribe from "../components/Subscribe/Subscribe";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Footer from "../components/Footer/Footer";
 import Popup from "../components/Popup/Popup";
+import HeaderBottom from "../components/HeaderBottom";
 
 const Home = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
@@ -28,6 +29,8 @@ const Home = () => {
   }, []);
   return (
     <>
+      <HeaderBottom />
+
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
         {/* <Hero handleOrderPopup={handleOrderPopup} /> */}
         <HomeHero />
