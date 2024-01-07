@@ -2,6 +2,7 @@ import React from "react";
 import Image1 from "../../assets/images/Headphones/OnEarHeadphones/onear14.png";
 import Image2 from "../../assets/images/Headphones/AirBuds/earbuds13.png";
 import Image3 from "../../assets/images/Mobiles/OnePlus/oneplus10.png";
+import Image4 from "../../assets/images/Camera/Nikon/nikon3.png";
 // import Image4 from "../../assets/hero/Blog/Blog-Jim-Fahad-Digital-4.webp";
 // import Image5 from "../../assets/hero/Blog/Blog-Jim-Fahad-Digital-5.webp";
 // import Image1 from "../../assets/hero/sale.png";
@@ -10,6 +11,7 @@ import Image3 from "../../assets/images/Mobiles/OnePlus/oneplus10.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { NavLink } from "react-router-dom";
 
 const ImageList = [
   {
@@ -18,6 +20,7 @@ const ImageList = [
     title: "Upto 50% off on all Earphones",
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    link: "/Headphones",
   },
   {
     id: 2,
@@ -30,6 +33,14 @@ const ImageList = [
     id: 3,
     img: Image3,
     title: "70% off on all OnePlus Phones",
+    description:
+      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    link: "/Mobiles",
+  },
+  {
+    id: 4,
+    img: Image4,
+    title: "30% off on all Canon Cameras",
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -59,53 +70,55 @@ const HomeHero = ({ handleOrderPopup }) => {
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.id}>
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                {/* text content section */}
-                <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                  <h1
-                    data-aos="zoom-out"
-                    data-aos-duration="500"
-                    data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-                  >
-                    {data.title}
-                  </h1>
-                  <p
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="100"
-                    className="text-sm"
-                  >
-                    {data.description}
-                  </p>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="300"
-                  >
-                    <button
-                      onClick={handleOrderPopup}
-                      className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+              <NavLink to={data.link}>
+                <div className="grid grid-cols-1 sm:grid-cols-2">
+                  {/* text content section */}
+                  <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
+                    <h1
+                      data-aos="zoom-out"
+                      data-aos-duration="500"
+                      data-aos-once="true"
+                      className="text-5xl sm:text-6xl lg:text-7xl font-bold"
                     >
-                      Order Now
-                    </button>
+                      {data.title}
+                    </h1>
+                    <p
+                      data-aos="fade-up"
+                      data-aos-duration="500"
+                      data-aos-delay="100"
+                      className="text-sm"
+                    >
+                      {data.description}
+                    </p>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-duration="500"
+                      data-aos-delay="300"
+                    >
+                      {/* <button
+                        onClick={handleOrderPopup}
+                        className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      >
+                        Order Now
+                      </button> */}
+                    </div>
+                  </div>
+                  {/* image section */}
+                  <div className="order-1 sm:order-2">
+                    <div
+                      data-aos="zoom-in"
+                      data-aos-once="true"
+                      className="relative z-10"
+                    >
+                      <img
+                        src={data.img}
+                        alt=""
+                        className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      />
+                    </div>
                   </div>
                 </div>
-                {/* image section */}
-                <div className="order-1 sm:order-2">
-                  <div
-                    data-aos="zoom-in"
-                    data-aos-once="true"
-                    className="relative z-10"
-                  >
-                    <img
-                      src={data.img}
-                      alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
-                    />
-                  </div>
-                </div>
-              </div>
+              </NavLink>
             </div>
           ))}
         </Slider>

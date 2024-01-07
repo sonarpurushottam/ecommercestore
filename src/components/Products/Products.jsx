@@ -1,49 +1,52 @@
 import React from "react";
-import Img1 from "../../assets/women/women.png";
-import Img2 from "../../assets/women/women2.jpg";
-import Img3 from "../../assets/women/women3.jpg";
-import Img4 from "../../assets/women/women4.jpg";
+import Img1 from "../../assets/images/Mobiles/Iphone/Iphone2.png";
+import Img2 from "../../assets/images/Laptops/Asus/asus2.png";
+import Img3 from "../../assets/images/Headphones/OnEarHeadphones/onear10.webp";
+import Img4 from "../../assets/images/Camera/Lecia/leica4.png";
+import Img5 from "../../assets/images/TV/Samsung/samsung4.png";
 import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const ProductsData = [
   {
-    id: 1,
+    id: 62,
     img: Img1,
-    title: "Women Ethnic",
+    title: "iphone15 Pro",
     rating: 5.0,
-    color: "white",
+    color: "Black",
     aosDelay: "0",
+    link: "/ProductDes",
   },
   {
-    id: 2,
+    id: 97,
     img: Img2,
-    title: "Women western",
+    title: "Asus Zenbook 15",
     rating: 4.5,
-    color: "Red",
+    color: "Gray",
     aosDelay: "200",
   },
   {
-    id: 3,
+    id: 25,
     img: Img3,
-    title: "Goggles",
+    title: "Boat 535",
     rating: 4.7,
-    color: "brown",
+    color: "Sky Blue",
     aosDelay: "400",
   },
   {
-    id: 4,
+    id: 179,
     img: Img4,
-    title: "Printed T-Shirt",
+    title: "Leica 45",
     rating: 4.4,
-    color: "Yellow",
+    color: "Silver Black",
     aosDelay: "600",
   },
   {
-    id: 5,
-    img: Img2,
-    title: "Fashin T-Shirt",
+    id: 139,
+    img: Img5,
+    title: "Samsung Neo56",
     rating: 4.5,
-    color: "Pink",
+    color: "Black",
     aosDelay: "800",
   },
 ];
@@ -76,11 +79,16 @@ const Products = () => {
                 key={data.id}
                 className="space-y-3"
               >
-                <img
-                  src={data.img}
-                  alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md"
-                />
+                <Link to={`/ProductDes/${data.id}`}>
+                  <img
+                    src={data.img}
+                    alt=""
+                    // className="h-[220px] w-[200px] object-cover rounded-md"
+                    className="object-cover
+                   w-full
+                   h-full"
+                  />
+                </Link>
                 <div>
                   <h3 className="font-semibold">{data.title}</h3>
                   <p className="text-sm text-gray-600">{data.color}</p>

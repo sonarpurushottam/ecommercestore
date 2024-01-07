@@ -1,5 +1,5 @@
 import React from "react";
-import BannerImg from "../../assets/women/women2.jpg";
+import BannerImg from "../../assets/images/Headphones/OnEarHeadphones/onear1.png";
 import { GrSecure } from "react-icons/gr";
 import { IoFastFood } from "react-icons/io5";
 import { GiFoodTruck } from "react-icons/gi";
@@ -14,14 +14,14 @@ const Banner = () => {
             <img
               src={BannerImg}
               alt=""
-              className="max-w-[400px] h-[350px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] object-cover"
+              className="max-w-[500px] h-[500px] w-full mx-auto drop-shadow-[-10px_10px_12px_rgba(0,0,0,1)] "
             />
           </div>
 
           {/* text details section */}
           <div className="flex flex-col justify-center gap-6 sm:pt-0">
             <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
-              Winter Sale upto 50% Off
+              Diwali Sale upto 50% Off
             </h1>
             <p
               data-aos="fade-up"

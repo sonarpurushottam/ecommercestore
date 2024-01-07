@@ -1,7 +1,7 @@
 import React from "react";
 
 import Aos from "aos";
-import Hero from "../components/Hero/Hero";
+
 import HomeHero from "../components/Hero/HomeHero";
 import Products from "../components/Products/Products";
 import TopProducts from "../components/TopProducts/TopProducts";

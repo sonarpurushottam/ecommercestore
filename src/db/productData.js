@@ -411,7 +411,7 @@ const productData = [
   {
     id: 25,
     img: onear10,
-    title: "Luxury Leather On-Ear Headphones",
+    title: "Boat 535",
     price: 4999,
     category: "onear",
     description:
@@ -816,8 +816,8 @@ const productData = [
   {
     id: 62,
     img: iphone2,
-    title: "iPhone 12",
-    price: 60000,
+    title: "iPhone15 Pro",
+    price: 90000,
     company: "Apple",
     category: "iOS",
     type: "mobiles",
@@ -928,7 +928,7 @@ const productData = [
   {
     id: 69,
     img: oneplus4,
-    title: "OnePlus 7 Pro",
+    title: "OnePlus 10Pro",
     price: 52999,
     company: "OnePlus",
     category: "Android",
@@ -1378,8 +1378,8 @@ const productData = [
   {
     id: 97,
     img: asus2,
-    title: "asus chromebook",
-    price: 53999,
+    title: "asus Zenbook 15",
+    price: 95999,
     company: "asus",
     category: "chromebook",
     type: "laptop",
@@ -2062,7 +2062,7 @@ const productData = [
   {
     id: 139,
     img: samsung4,
-    title: "Samsung 56",
+    title: "Samsung Neo56",
     price: 52999,
     company: "Samsung",
     type: "tv",
@@ -2564,7 +2564,7 @@ const productData = [
   {
     id: 179,
     img: leica4,
-    title: "leica 43",
+    title: "leica 45",
     price: 43999,
     company: "leica",
     type: "camera",

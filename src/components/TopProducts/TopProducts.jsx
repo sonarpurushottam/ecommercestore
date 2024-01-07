@@ -1,30 +1,31 @@
 import React from "react";
-import Img1 from "../../assets/shirt/shirt.png";
-import Img2 from "../../assets/shirt/shirt2.png";
-import Img3 from "../../assets/shirt/shirt3.png";
+import Img1 from "../../assets/images/Mobiles/OnePlus/oneplus4.png";
+import Img2 from "../../assets/images/Drones/drone1.png";
+import Img3 from "../../assets/images/Headphones/AirBuds/earbuds4.webp";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProductsData = [
   {
-    id: 1,
+    id: 69,
     img: Img1,
-    title: "Casual Wear",
+    title: "OnePlus 10Pro",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Immerse yourself in the stunning Fluid AMOLED display of the OnePlus 7 Pro, powered by the Snapdragon 855 chipset and equipped with a versatile triple-camera setup.",
   },
   {
-    id: 2,
+    id: 126,
     img: Img2,
-    title: "Printed shirt",
+    title: "Drone X",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "This is the description for drone X . It comes with a vibrant OLED display, 120 GB storage, 8 GB RAM, and ample camera options.",
   },
   {
-    id: 3,
+    id: 4,
     img: Img3,
-    title: "Women shirt",
+    title: "True Wireless Earbuds",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Compact and lightweight true wireless earbuds for everyday use.",
   },
 ];
 const TopProducts = ({ handleOrderPopup }) => {
@@ -72,12 +73,11 @@ const TopProducts = ({ handleOrderPopup }) => {
                 <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
                   {data.description}
                 </p>
-                <button
-                  className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                  onClick={handleOrderPopup}
-                >
-                  Order Now
-                </button>
+                <Link to={`/ProductDes/${data.id}`}>
+                  <button className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary">
+                    Order Now
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
