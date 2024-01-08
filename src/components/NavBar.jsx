@@ -48,15 +48,8 @@ const menuItems = [
     name: "Smartwatch",
     link: "/Smartwatch",
   },
-  {
-    id: 9,
-    name: "About",
-    link: "/About",
-  },
-  {
-    name: "Contact",
-    href: "#",
-  },
+
+  { id: 9, name: "Contact", link: "/Contact" },
 ];
 
 export function NavBar() {

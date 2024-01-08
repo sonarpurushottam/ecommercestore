@@ -11,7 +11,7 @@ import Drones from "./pages/Drones";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
-import About from "./pages/About";
+
 import Contact from "./pages/Contact";
 
 import Wishlist from "./components/Wishlist";
@@ -28,7 +28,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainHeader />}>
             <Route index element={<Home />}></Route>
-            <Route path="/About" element={<About />} />
+
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="/Wishlist" element={<Wishlist />} />
