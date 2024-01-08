@@ -15,13 +15,13 @@ import earbud13 from "./Headphones/AirBuds/earbuds13.png";
 import earbud14 from "./Headphones/AirBuds/earbuds14.png";
 import earbud15 from "./Headphones/AirBuds/earbuds15.png";
 //?onear
-import onear1 from "./Headphones/OnEarHeadphones/onear1.png";
+import onear1 from "./Headphones/OnEarHeadphones/onear1.webp";
 import onear2 from "./Headphones/OnEarHeadphones/onear2.png";
 import onear3 from "./Headphones/OnEarHeadphones/onear3.png";
 import onear4 from "./Headphones/OnEarHeadphones/onear4.png";
 import onear5 from "./Headphones/OnEarHeadphones/onear5.png";
 import onear6 from "./Headphones/OnEarHeadphones/onear6.webp";
-import onear7 from "./Headphones/OnEarHeadphones/onear7.webp";
+import onear7 from "./Headphones/OnEarHeadphones/onear7.png";
 import onear8 from "./Headphones/OnEarHeadphones/onear8.webp";
 import onear9 from "./Headphones/OnEarHeadphones/onear9.webp";
 import onear10 from "./Headphones/OnEarHeadphones/onear10.webp";

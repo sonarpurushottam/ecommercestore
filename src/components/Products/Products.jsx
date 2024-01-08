@@ -53,11 +53,11 @@ const ProductsData = [
 
 const Products = () => {
   return (
-    <div className="mt-14 mb-12">
+    <div className="mt-14 mb-12  ">
       <div className="container">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-primary">
+          <p data-aos="fade-up" className="text-sm  ">
             Top Selling Products for you
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
@@ -70,23 +70,23 @@ const Products = () => {
         </div>
         {/* Body section */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5 ">
             {/* card section */}
             {ProductsData.map((data) => (
               <div
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="space-y-3"
+                className="relative flex flex-col overflow-hidden rounded-lg border border-#3596B5  shadow-md place-items-center"
               >
                 <Link to={`/ProductDes/${data.id}`}>
                   <img
                     src={data.img}
                     alt=""
-                    // className="h-[220px] w-[200px] object-cover rounded-md"
-                    className="object-cover
-                   w-full
-                   h-full"
+                    className="h-[220px] w-[220px] object-cover rounded-md"
+                    //   className="object-cover
+                    //  w-full
+                    //  h-full"
                   />
                 </Link>
                 <div>
@@ -101,11 +101,11 @@ const Products = () => {
             ))}
           </div>
           {/* view all button */}
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
               View All Button
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

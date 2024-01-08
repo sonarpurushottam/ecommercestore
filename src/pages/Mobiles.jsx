@@ -58,7 +58,7 @@ const Mobiles = () => {
   return (
     <>
       <ToastContainer />
-      <div className="mb-4 flex w-50 h-20 ">
+      <div className="mb-4 flex w-50 h-20  ">
         <button
           className={`mr-2 ${
             filterCompany === "all"
@@ -111,10 +111,10 @@ const Mobiles = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 ">
         {filteredMobilesData.map((product) => (
           <div
-            className="relative flex flex-col overflow-hidden rounded-lg border border-#3596B5 bg-white shadow-md"
+            className="relative flex flex-col overflow-hidden rounded-lg border border-#3596B5 bg-[#F0F0F0] shadow-md"
             key={product.id}
           >
             <Link
@@ -122,7 +122,7 @@ const Mobiles = () => {
               className="relative flex h-100 overflow-hidden rounded-xl group"
             >
               <img
-                className="object-cover w-full h-full"
+                className="w-full h-full object-cover"
                 src={product.img}
                 alt="product image"
               />
@@ -134,7 +134,7 @@ const Mobiles = () => {
             <div className="mt-4 px-5 pb-5 flex flex-col items-center justify-between">
               <Link
                 to={`/ProductDes/${product.id}`}
-                className="text-xl tracking-tight text-slate-900"
+                className="text-xl tracking-tight text-[#009EFA]"
               >
                 {product.title}
               </Link>
@@ -147,7 +147,7 @@ const Mobiles = () => {
               </div>
               <button
                 onClick={() => handleAddToCart(product)}
-                className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 <FaCartShopping className="mr-2" />
                 Add to cart
@@ -157,7 +157,7 @@ const Mobiles = () => {
                 className={`mt-2 flex items-center justify-center rounded-md px-3 py-1.5 text-center text-sm font-medium ${
                   isItemInWishlist(product)
                     ? "bg-red-500 text-white"
-                    : "bg-gray-200"
+                    : "bg-[#FFC75F]"
                 }`}
               >
                 <MdFavorite className="mr-2" />

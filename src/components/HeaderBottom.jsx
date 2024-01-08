@@ -26,7 +26,7 @@ const HeaderBottom = () => {
   }, [searchQuery]);
 
   return (
-    <div className="w-full bg-[#F5F5F3] relative">
+    <div className="w-full bg-[#F0F0F0]  relative">
       <div className="max-w-container mx-auto2 ">
         <div className="flex justify-center">
           {" "}
@@ -35,7 +35,7 @@ const HeaderBottom = () => {
             {" "}
             {/* Added 'gap-4' for spacing */}
             <input
-              className="flex-1 h-full outline-none placeholder:text-[#C4C4C4] placeholder:text-[14px] mr-2" // Added 'mr-2' for spacing
+              className="flex-1 h-full outline-none placeholder:text-[#3B1E79] placeholder:text-[14px] mr-2" // Added 'mr-2' for spacing
               type="text"
               onChange={handleSearch}
               value={searchQuery}

@@ -1,6 +1,6 @@
 import React from "react";
 import Image1 from "../../assets/images/Headphones/OnEarHeadphones/onear14.png";
-import Image2 from "../../assets/images/Headphones/AirBuds/earbuds13.png";
+import Image2 from "../../assets/images/TV/Xiaomi/xiaomi5.png";
 import Image3 from "../../assets/images/Mobiles/OnePlus/oneplus10.png";
 import Image4 from "../../assets/images/Camera/Nikon/nikon3.png";
 // import Image4 from "../../assets/hero/Blog/Blog-Jim-Fahad-Digital-4.webp";
@@ -17,7 +17,7 @@ const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Upto 50% off on all Earphones",
+    title: "Upto 30% off on all Earphones",
     description:
       "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     link: "/Headphones",
@@ -25,14 +25,15 @@ const ImageList = [
   {
     id: 2,
     img: Image2,
-    title: "30% off on all Earbuds",
+    title: "40% off on all Tv",
     description:
       "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    link: "/Tv",
   },
   {
     id: 3,
     img: Image3,
-    title: "70% off on all OnePlus Phones",
+    title: "20% off on all Phones",
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     link: "/Mobiles",
@@ -40,16 +41,17 @@ const ImageList = [
   {
     id: 4,
     img: Image4,
-    title: "30% off on all Canon Cameras",
+    title: "40% off on all Cameras",
     description:
       "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    link: "/Camera",
   },
 ];
 
 const HomeHero = ({ handleOrderPopup }) => {
   var settings = {
-    dots: false,
-    arrows: false,
+    dots: true,
+    arrows: true,
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
@@ -61,12 +63,12 @@ const HomeHero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px]  flex justify-center items-center   dark:text-white duration-200 ">
       {/* background pattern */}
-      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
+      <div className="h-[700px] w-[700px]  absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]  "></div>
 
       {/* hero section */}
-      <div className="container pb-8 sm:pb-0">
+      <div className="container pb-8 sm:pb-0 ">
         <Slider {...settings}>
           {ImageList.map((data) => (
             <div key={data.id}>
