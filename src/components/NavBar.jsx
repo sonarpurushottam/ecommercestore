@@ -39,17 +39,17 @@ const menuItems = [
     link: "/Camera",
   },
   {
-    id: 6,
+    id: 7,
     name: "Drones",
     link: "/Drones",
   },
-  // {
-  //   id: 7,
-  //   name: "Shoes",
-  //   link: "/Shoes",
-  // },
   {
     id: 8,
+    name: "Smartwatch",
+    link: "/Smartwatch",
+  },
+  {
+    id: 9,
     name: "About",
     link: "/About",
   },

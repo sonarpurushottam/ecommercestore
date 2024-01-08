@@ -19,6 +19,7 @@ import ProductDes from "./components/ProductDes";
 
 import TV from "./pages/TV";
 import Camera from "./pages/Camera";
+import Smartwatch from "./pages/Smartwatch";
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/Camera" element={<Camera />} />
             <Route path="/Laptops" element={<Laptops />} />
             <Route path="/Headphones" element={<Headphones />} />
+            <Route path="/Smartwatch" element={<Smartwatch />} />
 
             <Route path="/ProductDes/:productId" element={<ProductDes />} />
             <Route path="*" element={<ErrorPage />} />
