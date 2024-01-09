@@ -29,7 +29,7 @@ export default function Footer() {
           </form>
         </div>
         <div className="mt-8 grid grid-cols-2 gap-6 md:mt-0 lg:w-3/4 lg:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, i) => (
+          {Array.from({ length: 1 }).map((_, i) => (
             <div key={i} className="mb-8 lg:mb-0">
               <p className="mb-6 text-lg font-semibold text-gray-700 ">
                 Company
