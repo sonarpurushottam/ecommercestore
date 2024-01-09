@@ -1,6 +1,6 @@
 import React from "react";
 import Img1 from "../../assets/images/Mobiles/OnePlus/oneplus4.png";
-import Img2 from "../../assets/images/Drones/drone1.png";
+import Img2 from "../../assets/images/Smartwatches/smartwatch12.webp";
 import Img3 from "../../assets/images/Headphones/AirBuds/earbuds4.webp";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -14,11 +14,10 @@ const ProductsData = [
       "Immerse yourself in the stunning Fluid AMOLED display of the OnePlus 7 Pro, powered by the Snapdragon 855 chipset and equipped with a versatile triple-camera setup.",
   },
   {
-    id: 126,
+    id: 47,
     img: Img2,
-    title: "Drone X",
-    description:
-      "This is the description for drone X . It comes with a vibrant OLED display, 120 GB storage, 8 GB RAM, and ample camera options.",
+    title: "Slim and Sleek Smartwatch",
+    description: "A slim and sleek smartwatch with advanced features.",
   },
   {
     id: 4,
@@ -34,13 +33,13 @@ const TopProducts = ({ handleOrderPopup }) => {
       <div className="container  ">
         {/* Header section */}
         <div className="text-left mb-24">
-          <p data-aos="fade-up" className="text-sm text-primary">
+          <p data-aos="fade-up" className="text-sm text-[#FF1B1C]">
             Top Rated Products for you
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl font-bold text-[#00798C]">
             Best Products
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
+          <p data-aos="fade-up" className="text-xs ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
             asperiores modi Sit asperiores modi
           </p>
@@ -69,8 +68,10 @@ const TopProducts = ({ handleOrderPopup }) => {
                   <FaStar className="text-yellow-500" />
                   <FaStar className="text-yellow-500" />
                 </div>
-                <h1 className="text-xl font-bold">{data.title}</h1>
-                <p className="text-gray-500 group-hover:text-white duration-300 text-sm line-clamp-2">
+                <h1 className="text-xl font-bold text-[#FF1B1C]">
+                  {data.title}
+                </h1>
+                <p className=" group-hover:text-white duration-300 text-sm line-clamp-2">
                   {data.description}
                 </p>
                 <Link to={`/ProductDes/${data.id}`}>

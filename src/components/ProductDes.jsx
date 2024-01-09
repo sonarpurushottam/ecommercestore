@@ -81,10 +81,10 @@ const ProductDes = () => {
               src={img}
             />
             <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
-              <h2 className="text-sm font-semibold tracking-widest text-gray-500">
+              <h2 className="text-sm font-semibold tracking-widest text-[#624CAB]">
                 {company}
               </h2>
-              <h1 className="my-4 text-3xl font-semibold text-black">
+              <h1 className="my-4 text-3xl font-semibold text-[#05668D]">
                 {title}
               </h1>
               <div className="my-4 flex items-center">
@@ -117,13 +117,13 @@ const ProductDes = () => {
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <span className="title-font text-xl font-bold text-gray-900">
-                  ₹{price}
+                <span className="title-font text-xl font-bold text-[#05668D]">
+                  ₹ {price}
                 </span>
                 <button
                   onClick={handleAddToCart}
                   type="button"
-                  className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  className="rounded-md bg-[#F18F01] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 >
                   Add to Cart
                 </button>

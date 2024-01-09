@@ -26,7 +26,7 @@ const HeaderBottom = () => {
   }, [searchQuery]);
 
   return (
-    <div className="w-full bg-[#F0F0F0]  relative">
+    <div className="w-full   relative">
       <div className="max-w-container mx-auto2 ">
         <div className="flex justify-center">
           {" "}
@@ -35,7 +35,7 @@ const HeaderBottom = () => {
             {" "}
             {/* Added 'gap-4' for spacing */}
             <input
-              className="flex-1 h-full outline-none placeholder:text-[#3B1E79] placeholder:text-[14px] mr-2" // Added 'mr-2' for spacing
+              className="flex-1 h-full outline-none placeholder:text-[#FF1B1C] font-bold text-xl placeholder:text-[14px] mr-2" // Added 'mr-2' for spacing
               type="text"
               onChange={handleSearch}
               value={searchQuery}
@@ -44,7 +44,7 @@ const HeaderBottom = () => {
             <FaSearch className="w-5 h-5" />
             {searchQuery && (
               <div
-                className={`w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
+                className={`w-full mx-auto h-96 bg-white  top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
               >
                 {searchQuery &&
                   filteredProducts.map((item) => (
@@ -63,11 +63,13 @@ const HeaderBottom = () => {
                     >
                       <img className="w-24" src={item.img} alt="productImg" />
                       <div className="flex flex-col gap-1">
-                        <p className="font-semibold text-lg">{item.title}</p>
+                        <p className="font-semibold text-lg text-[#00798C]">
+                          {item.title}
+                        </p>
                         <p className="text-xs">{item.description}</p>
                         <p className="text-sm">
-                          Price:{" "}
-                          <span className="text-primeColor font-semibold">
+                          {" "}
+                          <span className="text-primeColor font-semibold text-[#F71735]">
                             ₹{item.price}
                           </span>
                         </p>
