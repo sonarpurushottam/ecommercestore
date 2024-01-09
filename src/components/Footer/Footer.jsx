@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="w-full ">
       <div className="mx-auto flex max-w-6xl flex-col items-start space-x-8 md:flex-row">
         <div className="w-full px-4 md:w-1/2 lg:px-0">
-          <h1 className="max-w-sm text-3xl font-bold">
+          <h1 className="max-w-sm text-3xl font-bold text-[#00798C]">
             Subscribe to our Newsletter
           </h1>
           <form
@@ -61,7 +61,7 @@ export default function Footer() {
           <span className="ml-4 text-lg font-bold">DevUI</span>
         </div>
         <div className="mt-4 md:mt-0">
-          <p className="text-sm font-medium text-gray-500">
+          <p className="text-xl font-bold text-[#FF1B1C]">
             ©2024 Online Store. All rights reserved by Purushottam Sonar.
           </p>
         </div>

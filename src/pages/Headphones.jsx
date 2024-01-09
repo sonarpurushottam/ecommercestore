@@ -125,22 +125,21 @@ const Headphones = () => {
             <div className="mt-4 px-5 pb-5 flex flex-col items-center justify-between">
               <Link
                 to={`/ProductDes/${product.id}`}
-                className="text-xl tracking-tight text-slate-900"
+                className="text-xl tracking-tight text-[#00798C]"
               >
                 {product.title}
               </Link>
               <div className="mt-2 mb-5 flex items-center justify-center">
                 <p>
-                  <span className="text-3xl font-bold text-slate-900">
-                    {product.price}
+                  <span className="text-3xl font-bold text-[#F71735]">
+                    ₹{product.price}
                   </span>
                 </p>
               </div>
               <button
                 onClick={() => handleAddToCart(product)}
                 // className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
-                className="cursor-pointer inline-flex items-center rounded-full px-5 py-2.5 text-sm font-mono font-semibold text-rose-600 hover:text-white border-2 border-rose-600
-                 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-75 hover:bg-rose-600 duration-300  focus:bg-transparent"
+                className="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 "
               >
                 <FaCartShopping className="mr-2" />
                 Add to Cart
@@ -150,7 +149,7 @@ const Headphones = () => {
                 className={`mt-2 flex items-center justify-center rounded-md px-3 py-1.5 text-center text-sm font-medium ${
                   isItemInWishlist(product)
                     ? "bg-red-500 text-white"
-                    : "bg-gray-200"
+                    : "bg-[#FFC75F]"
                 }`}
               >
                 <MdFavorite className="mr-2" />

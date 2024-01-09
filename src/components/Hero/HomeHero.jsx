@@ -80,7 +80,7 @@ const HomeHero = ({ handleOrderPopup }) => {
                       data-aos="zoom-out"
                       data-aos-duration="500"
                       data-aos-once="true"
-                      className="text-5xl sm:text-6xl lg:text-7xl font-bold"
+                      className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#00798C]"
                     >
                       {data.title}
                     </h1>
@@ -88,7 +88,7 @@ const HomeHero = ({ handleOrderPopup }) => {
                       data-aos="fade-up"
                       data-aos-duration="500"
                       data-aos-delay="100"
-                      className="text-sm"
+                      className="text-sm "
                     >
                       {data.description}
                     </p>

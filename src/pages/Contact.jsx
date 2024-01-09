@@ -182,7 +182,7 @@ export default function Contact() {
                       fill="black"
                     />
                   </svg>
-                  <span className="ml-4 text-lg font-bold">DevUI</span>
+                  <span className="ml-4 text-lg font-bold">Online Store</span>
                 </div>
               </a>
             </div>

@@ -63,9 +63,9 @@ export function NavBar() {
   };
 
   return (
-    <div className="relative w-full bg-[#F0F0F0] ">
+    <div className="relative w-full">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center space-x-2">
+        <div className="inline-flex items-center space-x-2 ">
           <span>
             <svg
               width="30"
@@ -83,13 +83,13 @@ export function NavBar() {
           <span className="font-bold">Online Store</span>
         </div>
         <div className="hidden grow items-start lg:flex">
-          <ul className="ml-12 inline-flex space-x-8">
+          <ul className="ml-12 inline-flex space-x-8 ">
             {menuItems.map((item) => (
               <li key={item.id}>
                 <NavLink
                   to={item.link}
                   exact={item.link === "/"}
-                  className="text-sm font-semibold text-gray-800 hover:text-gray-900"
+                  className="text-[17px] font-semibold  text-[#FF7F11] hover:text-gray-900"
                 >
                   {item.name}
                 </NavLink>
@@ -99,15 +99,9 @@ export function NavBar() {
         </div>
 
         <div className="hidden lg:block">
-          {/* <button
-            type="button"
-            className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            Button text
-          </button> */}
           <NavLink
             to="/cart"
-            className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+            className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center group ml-2 mr-2"
           >
             <span className="group-hover:block hidden transition-all duration-200">
               Cart
@@ -122,7 +116,7 @@ export function NavBar() {
         <div className="hidden lg:block">
           <NavLink
             to="/wishlist"
-            className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+            className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white py-1 px-4 rounded-full flex items-center group ml-2 mr-2"
           >
             <span className="group-hover:block hidden transition-all duration-200">
               Wishlist
@@ -161,7 +155,7 @@ export function NavBar() {
                     <div className="flex">
                       <NavLink
                         to="/cart"
-                        className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+                        className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center ml-2 mr-2 group"
                       >
                         <span className="group-hover:block hidden transition-all duration-200">
                           Cart
@@ -174,7 +168,7 @@ export function NavBar() {
 
                       <NavLink
                         to="/wishlist"
-                        className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+                        className="bg-gradient-to-r from-primary to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center ml-2 mr-2 group"
                       >
                         <span className="group-hover:block hidden transition-all duration-200">
                           Wishlist

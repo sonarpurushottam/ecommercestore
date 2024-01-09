@@ -2,7 +2,7 @@ import React from "react";
 import Img1 from "../../assets/images/Mobiles/Iphone/Iphone2.png";
 import Img2 from "../../assets/images/Laptops/Asus/asus2.png";
 import Img3 from "../../assets/images/Headphones/OnEarHeadphones/onear10.webp";
-import Img4 from "../../assets/images/Camera/Lecia/leica4.png";
+import Img4 from "../../assets/images/Smartwatches/smartwatch2.png";
 import Img5 from "../../assets/images/TV/Samsung/samsung4.png";
 import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -34,9 +34,9 @@ const ProductsData = [
     aosDelay: "400",
   },
   {
-    id: 179,
+    id: 37,
     img: Img4,
-    title: "Leica 45",
+    title: "Smartwatch Model B",
     rating: 4.4,
     color: "Silver Black",
     aosDelay: "600",
@@ -57,13 +57,13 @@ const Products = () => {
       <div className="container">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm  ">
+          <p data-aos="fade-up" className="text-sm text-[#FF1B1C] ">
             Top Selling Products for you
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl font-bold text-[#00798C]">
             Products
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
+          <p data-aos="fade-up" className="text-xs ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
             asperiores modi Sit asperiores modi
           </p>
@@ -90,7 +90,9 @@ const Products = () => {
                   />
                 </Link>
                 <div>
-                  <h3 className="font-semibold">{data.title}</h3>
+                  <h3 className="font-semibold text-[#FF1B1C] ">
+                    {data.title}
+                  </h3>
                   <p className="text-sm text-gray-600">{data.color}</p>
                   <div className="flex items-center gap-1">
                     <FaStar className="text-yellow-400" />

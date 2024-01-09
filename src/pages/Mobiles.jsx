@@ -62,7 +62,7 @@ const Mobiles = () => {
         <button
           className={`mr-2 ${
             filterCompany === "all"
-              ? "bg-blue-500 w-[150px]  h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
+              ? "bg-blue-500 w-[150px] h-[50px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
               : "w-[120px] bg-black h-[40px] my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#009b49] before:to-[rgb(105,184,141)] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff]"
           }`}
           onClick={() => handleCompanyFilter("all")}
@@ -134,13 +134,13 @@ const Mobiles = () => {
             <div className="mt-4 px-5 pb-5 flex flex-col items-center justify-between">
               <Link
                 to={`/ProductDes/${product.id}`}
-                className="text-xl tracking-tight text-[#009EFA]"
+                className="text-xl tracking-tight text-[#00798C]"
               >
                 {product.title}
               </Link>
               <div className="mt-2 mb-5 flex items-center justify-center">
                 <p>
-                  <span className="text-3xl font-bold text-slate-900">
+                  <span className="text-3xl font-bold text-[#F71735]">
                     ₹{product.price}
                   </span>
                 </p>

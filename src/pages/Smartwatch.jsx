@@ -94,13 +94,13 @@ const Smartwatch = () => {
             <div className="mt-4 px-5 pb-5 flex flex-col items-center justify-between">
               <Link
                 to={`/ProductDes/${product.id}`}
-                className="text-xl tracking-tight text-[#009EFA]"
+                className="text-xl tracking-tight text-[#00798C]"
               >
                 {product.title}
               </Link>
               <div className="mt-2 mb-5 flex items-center justify-center">
                 <p>
-                  <span className="text-3xl font-bold text-slate-900">
+                  <span className="text-3xl font-bold text-[#F71735]">
                     ₹{product.price}
                   </span>
                 </p>

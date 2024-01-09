@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 body {
-  background-color: #533391;
-  font-family: "Poppins", sans-serif;
+  background-color: #e7ecef;
+  font-family: "Noto Serif", serif;
 }
