@@ -1,24 +1,111 @@
+// cartSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 import productData from "../db/productData";
-const initialState = {
-  cart: [],
-  items: productData,
-  totalQuantity: 0,
-  totalPrice: 0,
+
+const calculateTotal = (items) => {
+  const total = items.reduce(
+    (acc, item) => acc + item.quantity * item.price,
+    0
+  );
+  const quantity = items.reduce((acc, item) => acc + item.quantity, 0);
+  return { total, quantity };
 };
-export const cartSlice = createSlice({
+
+const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: {
+    items: [],
+    total: 0,
+    quantity: 0,
+    productData: productData,
+    wishlist: [], // Added wishlist array
+  },
   reducers: {
     addToCart: (state, action) => {
-      let find = state.cart.findIndex((item) => item.id === action.payload.id);
-      if (find >= 0) {
-        state.cart[find].quantity += 1;
+      const { id, title, quantity, price, img } = action.payload;
+      const existingItem = state.items.find(
+        (item) => item.id === id && item.title === title
+      );
+
+      if (existingItem) {
+        existingItem.quantity += quantity;
       } else {
-        state.cart.push(action.payload);
+        state.items.push({ id, title, quantity, price, img });
       }
+
+      const { total, quantity: totalQuantity } = calculateTotal(state.items);
+      state.total = total;
+      state.quantity = totalQuantity;
+    },
+    removeFromCart: (state, action) => {
+      const { id, title } = action.payload;
+      state.items = state.items.filter(
+        (item) => !(item.id === id && item.title === title)
+      );
+
+      const { total, quantity } = calculateTotal(state.items);
+      state.total = total;
+      state.quantity = quantity;
+    },
+    increaseQuantity: (state, action) => {
+      const { id, title } = action.payload;
+      const existingItem = state.items.find(
+        (item) => item.id === id && item.title === title
+      );
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      }
+
+      const { total, quantity } = calculateTotal(state.items);
+      state.total = total;
+      state.quantity = quantity;
+    },
+    decreaseQuantity: (state, action) => {
+      const { id, title } = action.payload;
+      const existingItem = state.items.find(
+        (item) => item.id === id && item.title === title
+      );
+
+      if (existingItem && existingItem.quantity > 1) {
+        existingItem.quantity -= 1;
+      }
+
+      const { total, quantity } = calculateTotal(state.items);
+      state.total = total;
+      state.quantity = quantity;
+    },
+    clearCart: (state) => {
+      state.items = [];
+      state.total = 0;
+      state.quantity = 0;
+    },
+    addToWishlist: (state, action) => {
+      const { id, title, quantity, price, img } = action.payload;
+      const existingItem = state.wishlist.find(
+        (item) => item.id === id && item.title === title
+      );
+
+      if (!existingItem) {
+        state.wishlist.push({ id, title, quantity, price, img });
+      }
+    },
+    removeFromWishlist: (state, action) => {
+      const { id, title } = action.payload;
+      state.wishlist = state.wishlist.filter(
+        (item) => !(item.id === id && item.title === title)
+      );
     },
   },
 });
-export const { addToCart } = cartSlice.actions;
+
+export const {
+  addToCart,
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+  clearCart,
+  addToWishlist,
+  removeFromWishlist,
+} = cartSlice.actions;
 export default cartSlice.reducer;
