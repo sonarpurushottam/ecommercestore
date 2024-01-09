@@ -34,17 +34,19 @@ const Cart = () => {
   return (
     <div className="">
       <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4 ">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold mb-4 text-[#00798C]">
+          Shopping Cart
+        </h1>
 
         {items.length === 0 ? (
-          <p>Your cart is empty.</p>
+          <p className="text-[#00798C]">Your cart is empty.</p>
         ) : (
           <div>
             <ul className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 ">
               {items.map((item) => (
                 <li
                   key={item.id}
-                  className=" px-5 pb-5 flex flex-col items-center justify-between  rounded-[14px] border-solid border-2 border-sky-500 bg-gray-200"
+                  className=" px-5 pb-5 flex flex-col items-center justify-between rounded-[14px]  bg-gray-200"
                 >
                   <img
                     src={item.img}
@@ -54,9 +56,9 @@ const Cart = () => {
                   />
                   <div>
                     <div className=" bg-gray-200 w-full h-6 m-2 flex items-center justify-center font-bold gap-2">
-                      <p>{item.title}</p>
+                      <p className=" text-[#00798C]">{item.title}</p>
                       <div>
-                        <p>₹{item.price}</p>
+                        <p className=" text-[#F71735]">₹{item.price}</p>
                       </div>
                     </div>
                   </div>
@@ -73,7 +75,9 @@ const Cart = () => {
                     >
                       <FaPlus />
                     </button>
-                    <div>Quantity: {item.quantity}</div>
+                    <div className="text-[#291528]">
+                      Quantity: {item.quantity}
+                    </div>
                   </div>
                   <div className="flex items-center mt-2 gap-1 font-bold">
                     <button
@@ -82,7 +86,7 @@ const Cart = () => {
                     >
                       <FaTrash />
                     </button>
-                    <span className="italic">
+                    <span className="italic text-[#291528]">
                       Subtotal:₹{item.quantity * item.price}
                     </span>
                   </div>

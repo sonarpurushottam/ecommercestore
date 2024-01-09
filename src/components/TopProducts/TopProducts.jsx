@@ -1,6 +1,6 @@
 import React from "react";
 import Img1 from "../../assets/images/Mobiles/OnePlus/oneplus4.png";
-import Img2 from "../../assets/images/Drones/drone1.png";
+import Img2 from "../../assets/images/Smartwatches/smartwatch12.webp";
 import Img3 from "../../assets/images/Headphones/AirBuds/earbuds4.webp";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -14,11 +14,10 @@ const ProductsData = [
       "Immerse yourself in the stunning Fluid AMOLED display of the OnePlus 7 Pro, powered by the Snapdragon 855 chipset and equipped with a versatile triple-camera setup.",
   },
   {
-    id: 126,
+    id: 47,
     img: Img2,
-    title: "Drone X",
-    description:
-      "This is the description for drone X . It comes with a vibrant OLED display, 120 GB storage, 8 GB RAM, and ample camera options.",
+    title: "Slim and Sleek Smartwatch",
+    description: "A slim and sleek smartwatch with advanced features.",
   },
   {
     id: 4,

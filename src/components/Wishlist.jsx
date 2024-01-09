@@ -18,15 +18,15 @@ const Wishlist = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4 ">Wishlist</h1>
+      <h1 className="text-3xl font-bold mb-4 text-[#00798C] ">Wishlist</h1>
       {wishlistItems.length === 0 ? (
-        <p>Your wishlist is empty.</p>
+        <p className="text-[#00798C]">Your wishlist is empty.</p>
       ) : (
         <ul className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 ">
           {wishlistItems.map((item) => (
             <li
               key={`${item.id}-${item.type}`}
-              className=" px-5 pb-5 flex flex-col items-center justify-between  rounded-[14px] border-solid border-2 border-sky-500 bg-gray-200"
+              className=" px-5 pb-5 flex flex-col items-center justify-between  rounded-[14px]  bg-gray-200"
             >
               <img
                 src={item.img}
@@ -34,9 +34,9 @@ const Wishlist = () => {
                 className="object-cover w-full h-full "
               />
               <div className=" bg-gray-200 w-full h-6 m-2 flex items-center justify-center font-bold gap-2">
-                <p>{item.title}</p>
+                <p className="text-[#00798C]">{item.title}</p>
                 <div>
-                  <p>₹{item.price}</p>
+                  <p className="text-[#F71735]">₹{item.price}</p>
                 </div>
               </div>
 
