@@ -53,12 +53,11 @@ export default function Footer() {
               <img src={logo} alt="logo" className="w-[80px] h-[80px]" />
             </NavLink>
           </span>
-          <span className="ml-4 text-lg font-bold">Online Store</span>
-        </div>
-        <div className="mt-4 md:mt-0">
-          <p className="text-xl font-bold text-[#FF1B1C]">
-            ©2024 Online Store. All rights reserved by Purushottam Sonar.
-          </p>
+          <span className="ml-4 text-lg font-bold">
+            <p className="text-xl font-bold text-[#FF1B1C]">
+              ©2024 Online Store. All rights reserved by Purushottam Sonar.
+            </p>
+          </span>
         </div>
       </div>
     </footer>
