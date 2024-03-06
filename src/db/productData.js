@@ -188,8 +188,8 @@ const productData = [
   {
     id: 1,
     img: earbud1,
-    title: "Wireless Earbuds Pro",
-    price: 2500,
+    title: "boat 441 pro",
+    price: 3500,
     category: "earbud",
     description: "Premium wireless earbuds with advanced features.",
     type: "headphones",
